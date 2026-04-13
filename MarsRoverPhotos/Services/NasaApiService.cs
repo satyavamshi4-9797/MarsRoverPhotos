@@ -1,3 +1,4 @@
+// NasaApiService: implements 3-source fallback chain for Mars rover image retrieval
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using MarsRoverPhotos.Models;
@@ -87,7 +88,7 @@ public class NasaApiService : INasaApiService
     private async Task<(List<NasaPhoto>? Photos, string? Error)> TryNasaImageLibrary(
     HttpClient client, DateOnly date, int maxPhotos, CancellationToken ct)
     {
-        // Search specifically for raw rover camera images — not diagrams or press graphics
+        // Search specifically for raw rover camera images   not diagrams or press graphics
         var year = date.Year;
         // Try multiple queries in order until we get enough photos
         var queries = new[]
@@ -122,7 +123,7 @@ public class NasaApiService : INasaApiService
             var photos = new List<NasaPhoto>();
             var dateStr = date.ToString("yyyy-MM-dd");
 
-            // Keywords that indicate diagrams, charts, or non-photo content — skip these
+            // Keywords that indicate diagrams, charts, or non-photo content   skip these
             var skipKeywords = new[] { "diagram", "chart", "graphic", "illustration",
             "artist", "concept", "render", "map", "infographic", "logo", "schematic" };
 
