@@ -1,3 +1,5 @@
+// DateParserService: handles 8 date formats with round-trip validation to catch invalid dates
+
 using System.Globalization;
 
 namespace MarsRoverPhotos.Services;
