@@ -87,3 +87,6 @@ The fallback uses targeted search queries varied by date to ensure different pho
 | **API source** | Used NASA Mars Photos API only | Implemented 3-source fallback chain | Primary API was retired Oct 2025; app must be resilient |
 | **Image filtering** | Returned all search results | Added keyword filter to skip diagrams/charts | NASA Image Library returns mixed content types |
 | **Search queries** | Single fixed query | Varied query per date using year + camera type | Ensures different photos per date folder |
+
+
+## Last Updated : April 2026
