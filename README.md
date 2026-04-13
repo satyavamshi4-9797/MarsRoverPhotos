@@ -137,4 +137,5 @@ MarsRoverPhotos.Tests/
 3. **Duplicate detection**: If a file already exists on disk, the download is skipped — running the app twice is safe.
 4. **Two-digit years**: `02/27/17` is interpreted as 2017 per C# `DateTime` conventions (years ≤ 29 map to 2000s, 30–99 map to 1900s).
 5. **Invalid date handling**: `April 31` is caught via a round-trip format check — without this guard C# would silently adjust it to May 1.
-6. **NASA API outage**: The original Mars Photos API was retired in October 2025. The app falls back to the NASA Image and Video Library which is fully operational. This is documented in `AI_NOTES.md`.
+6. **NASA API outage**: The original Mars Photos API was retired in October 2025. The app falls back to the NASA Image and Video Library which is fully operational. This is documented in `AI_NOTES.md`. 
+"## Notes" 
